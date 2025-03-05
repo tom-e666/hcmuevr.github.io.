@@ -1,101 +1,206 @@
-import Image from "next/image";
+'use client'
+import { useEffect } from "react";
+import introJs from "intro.js";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        useEffect(() => {
+               setTimeout(function() {
+                       introJs().setOptions({
+                               steps: [
+                                       {
+                                               element: "#frame-container",
+                                               intro: "👉 Chào bạn! Hãy tìm hiểu một chút trước khi chúng ta cùng khám phá Trường Đại học Sư Phạm TP.HCM nhé!",
+                                               tooltipClass: "custom-intro-tooltip",
+
+                                       },
+                                       {
+                                               element: "#city-map",
+                                               intro: "📍 Đây là vị trí của bạn trên bản đồ, hãy dùng nó để định hướng nha!",
+                                               tooltipClass: "custom-intro-tooltip"
+                                       },
+                                       {
+                                               element: "#menu-button",
+                                               intro: "📌 Danh sách các địa điểm quan trọng ở đây, hãy chọn nơi bạn muốn đến nhé!",
+                                               tooltipClass: "custom-intro-tooltip"
+                                       },
+                                       {
+                                               element: "#button-1",
+                                               intro: "🔍 Nhấn vào đây để phóng to bản đồ.",
+                                               tooltipClass: "custom-intro-tooltip"
+                                       },
+                                       {
+                                               element: "#button-2",
+                                               intro: "🔎 Nhấn vào đây để thu nhỏ bản đồ.",
+                                               tooltipClass: "custom-intro-tooltip"
+                                       },
+                                       {
+                                               element: "#button-3",
+                                               intro: "🗣 Bật trợ lý thuyết minh để nghe hướng dẫn chi tiết cho bạn nha.",
+                                               tooltipClass: "custom-intro-tooltip"
+                                       },
+                                       {
+                                               element: "#button-4",
+                                               intro: "ℹ️ Hiển thị thông tin chi tiết về địa điểm bạn đang xem.",
+                                               tooltipClass: "custom-intro-tooltip"
+                                       },
+                                       {
+                                               element: "#button-5",
+                                               intro: "🖥 Trải nghiệm toàn màn hình để nhìn rõ hơn.",
+                                               tooltipClass: "custom-intro-tooltip"
+                                       },
+                                       {
+                                               element: "#frame-container",
+                                               intro: "🌟 Tuyệt vời! Hãy cùng khám phá Trường Đại học Sư Phạm TP.HCM ngay thôi!",
+                                               tooltipClass: "custom-intro-tooltip"
+                                       },
+                               ],
+                               nextLabel: "Tiếp theo",
+                               prevLabel: "Trước đó",
+                               doneLabel: "Hoàn thành",
+                               // disableInteraction:true, //click background without skipping evelement
+                       }).start();
+               },5000);
+        }, []);
+        return (
+            <div id="iframe-container" className="w-screen h-screen bg-amber-100">
+                    <iframe
+                        src="https://hcmuevr360.vercel.app/"
+                        className="w-full h-full border-0"
+                    />
+
+
+                    <div
+                        id="city-map"
+                        style={{
+                                zIndex: 10,
+                                background: "rgb(25, 0, 25)",
+                                border: "1px solid rgb(0, 0, 0)",
+                                cursor: "default",
+                                height: "146px",
+                                overflow: "hidden",
+                                position: "absolute",
+                                right: "5px",
+                                top: "44px",
+                                width: "292px",
+                                pointerEvents: "auto",
+                                opacity:0,
+                        }}
+                    ></div>
+
+                    {/* Button List */}
+                    <div
+                        id="button-list"
+                        style={{
+                                zIndex: 10,
+                                border: "1px solid rgb(0, 0, 0)",
+                                cursor: "pointer",
+                                height: "32px",
+                                position: "absolute",
+                                left: "50%",
+                                transform: "translateX(-50%)",
+                                bottom: "2dvh",
+                                opacity: 0,
+                                visibility: "inherit",
+                                width: "288px",
+                                pointerEvents: "auto",
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                background: "rgba(255,255,255,0.2)",
+                        }}
+                    >
+                            {/* Buttons */}
+                            <div
+                                id="button-1"
+                                data-intro="Hello step two!"
+                                style={{
+                                        zIndex: 10,
+                                        background: "rgb(128, 128, 128)",
+                                        border: "1px dashed rgb(0, 0, 0)",
+                                        height: "32px",
+                                        width: "32px",
+                                        pointerEvents: "auto",
+                                        opacity: 0,
+                                }}
+                            ></div>
+
+                            <div
+                                id="button-2"
+                                style={{
+                                        zIndex: 10,
+                                        background: "rgb(25, 0, 25)",
+                                        border: "1px dashed rgb(0, 0, 0)",
+                                        height: "32px",
+                                        width: "32px",
+                                        pointerEvents: "auto",
+                                        opacity: 0,
+
+                                }}
+                            ></div>
+
+                            <div
+                                id="button-3"
+                                style={{
+                                        zIndex: 10,
+                                        background: "rgb(25, 0, 25)",
+                                        border: "1px solid rgb(0, 0, 0)",
+                                        height: "32px",
+                                        width: "32px",
+                                        pointerEvents: "auto",
+                                        opacity: 0,
+
+                                }}
+                            ></div>
+
+                            <div
+                                id="button-4"
+                                style={{
+                                        zIndex: 10,
+                                        background: "rgb(25, 0, 25)",
+                                        border: "1px solid rgb(0, 0, 0)",
+                                        height: "32px",
+                                        width: "32px",
+                                        pointerEvents: "auto",
+                                        opacity: 0,
+
+                                }}
+                            ></div>
+
+                            <div
+                                id="button-5"
+                                style={{
+                                        zIndex: 10,
+                                        background: "rgb(25, 0, 25)",
+                                        border: "1px solid rgb(0, 0, 0)",
+                                        height: "32px",
+                                        width: "32px",
+                                        pointerEvents: "auto",
+                                        opacity: 0,
+
+                                }}
+                            ></div>
+                    </div>
+
+                    {/* Menu Button */}
+                    <div
+                        id="menu-button"
+                        style={{
+                                zIndex: 10,
+                                cursor: "pointer",
+                                height: "32px",
+                                left: "5px",
+                                position: "absolute",
+                                top: "5px",
+                                width: "32px",
+                                pointerEvents: "auto",
+                                background: "rgba(0, 0, 0, 0.2)",
+                                border: "1px solid black",
+                                opacity: 0,
+
+                        }}
+                    ></div>
+            </div>
+        );
 }
