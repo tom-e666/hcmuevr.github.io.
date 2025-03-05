@@ -51,7 +51,7 @@ export default function Home() {
                                        },
                                        {
                                                element: "#frame-container",
-                                               intro: "🌟 Tuyệt vời! Hãy cùng khám phá Trường Đại học Sư Phạm TP.HCM ngay thôi!",
+                                               intro: "🌟 Tuyệt vời! Hãy cùng khám phá Trường Đại học Sư phạm Thành phố Hồ Chí Minh ngay thôi!",
                                                tooltipClass: "custom-intro-tooltip"
                                        },
                                ],
