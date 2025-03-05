@@ -58,7 +58,6 @@ export default function Home() {
                                nextLabel: "Tiếp theo",
                                prevLabel: "Trước đó",
                                doneLabel: "Hoàn thành",
-                               // disableInteraction:true, //click background without skipping evelement
                        }).start();
                },5000);
         }, []);
