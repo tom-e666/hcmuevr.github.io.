@@ -63,7 +63,7 @@ export default function Home() {
                },5000);
         }, []);
         return (
-            <div id="iframe-container" className="w-screen h-screen bg-amber-100">
+            <div id="frame-container" className="w-screen h-screen bg-amber-100">
                     <iframe
                         src="https://hcmuevr360.vercel.app/"
                         className="w-full h-full border-0"
