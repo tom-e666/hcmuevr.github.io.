@@ -36,3 +36,6 @@ body {
   opacity: 0.9 !important;
 
 }
+.introjs-tooltipReferenceLayer {
+    visibility: visible;
+}
